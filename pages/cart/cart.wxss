@@ -1,0 +1,178 @@
+/* pages/cart/cart.wxss */
+.cart-title{
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+  font-size: 30rpx;
+}
+.cart-title button{
+  float: right;
+  position: fixed;
+  right: 20rpx;
+  height: 70rpx;
+  background-color: white;
+}
+.cart{
+  margin: 90rpx 20rpx;
+  background-color: rgb(248, 248, 248);
+  border-radius: 20rpx;
+  
+}
+.pet-cart{
+  padding: 10rpx 20rpx;
+  font-size: 32rpx;
+}
+checkbox .wx-checkbox-input{
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;
+  border: solid 4rpx gainsboro;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #ff5557;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+ content: ''; 
+ border-radius: 50%;
+ 
+}
+
+.pet-item{
+  height: 180rpx;
+  width: 100%;
+  display: flex;
+  margin: 20rpx 0;
+}
+.item-check{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  line-height: 200rpx;
+}
+.item-image{
+  width: 27%;
+  border-radius: 20rpx;
+  margin-right: 3%;
+}
+.item-image image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.item-content{
+  width: 60%;
+  border-radius: 10rpx;
+}
+.ct-title{
+  height: 40%;
+  width: 100%;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+.ct-detail{
+  height: 45%;
+  width: 100%;
+  display: flex;
+}
+.ct-price{
+  width: 48%;
+  display: flex;  
+  align-items: center;  
+  vertical-align: center;
+}
+.ct-price image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.ct-count{
+  width: 48%;
+  display: flex;  
+  align-items: center;  
+  vertical-align: center;
+}
+.ct-count image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto;
+}
+.ct-count input{
+  width: 60rpx;
+  margin: auto;
+  background-color: white;
+  text-align: center;  
+}
+.cart-total{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 80rpx;
+  display: flex;
+  align-items: center;  
+  vertical-align: center;
+  background-color: white;
+  z-index: 999;
+  padding-left:2%;
+  font-size: 32rpx;
+  border-top: solid 1rpx gainsboro;
+}
+
+.allcheckd{
+  width: 28%;
+  height: 100%;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;  
+  vertical-align: center;
+}
+.allcheckd text{
+  display: inline-block;
+  width: 70%;
+}
+.checkgbox{
+  width: 30%;
+}
+.totalprice{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;  
+  vertical-align: center;
+  font-size: 30rpx;
+}
+.totalprice image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.cart-pay{
+  width: 30%;
+  height: 100%;
+  background-color: #ff5557;
+  color: white;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.cart-delete{
+  width: 35%;
+  height: 100%;
+  background-color: #ff5557;
+  color: white;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: bold;
+  border: solid 2rpx white;
+}

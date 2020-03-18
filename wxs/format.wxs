@@ -1,0 +1,15 @@
+var formatPrice = {
+  toFix: function(value){
+    if (typeof (value) =='undefined'){
+      return value
+    }
+    else{
+      return value.toFixed(2)//保留两位小数
+    }
+  }
+}
+
+//暴露接口
+module.exports = {
+  toFix: formatPrice.toFix
+}

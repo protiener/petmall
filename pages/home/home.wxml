@@ -1,0 +1,66 @@
+<!--pages/home/home.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+<!-- 首页顶部轮播图 -->
+<swiper class="swiper" 
+        indicator-dots 
+        autoplay 
+        circular
+        indicator-active-color="white"> 
+  <block wx:for="{{ad}}" wx:key="item">
+    <swiper-item class="swiper-item" >
+      <image src="{{item.image}}" class="swiper-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 热门分类 -->
+<view class="hotcate">
+  <view class="homehotcate">
+    <block wx:for="{{tophotcat}}" wx:key="item">
+      <view class="homehotcate-item" 
+            bindtap="skinTogoods"
+            data-catename="{{item}}">
+        <image src="{{item.image}}" />
+        <view>{{item.category_title}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="homehotcate">
+    <block wx:for="{{tophotdog}}" wx:key="item">
+      <view class="homehotcate-item"
+            bindtap="skinTogoods"
+            data-catename="{{item}}">
+        <image src="{{item.image}}" />
+        <view class="hotitem-text">{{item.category_title}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 周边热卖  -->
+<!-- 跳转至详情页还没做！！！ -->
+<view class="hottool"> 
+  <view class="hottooltitle">周边热卖</view>
+  <block wx:for="{{tophottool}}" wx:key="item">
+    <view class="hottool-item" 
+          bindtap="skinTogooddet"
+          data-detcontent="{{item}}">
+      <image src="{{item.image}}" 
+              mode="widthFix"
+              class="hottool-image"/>
+      <view class="hottool-content">
+        <text>{{item.title}}</text>
+        <view class="goods-iconbox">
+          <image src="/assets/goods/price.svg.png"
+                mode="widthFix"/>
+          <text>{{formatPrice.toFix(item.price)}}</text>
+        </view>
+        <view class="goods-iconbox">
+          <image src="/assets/goods/sale.png"
+                mode="widthFix"/>
+          <text>{{item.sale}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+

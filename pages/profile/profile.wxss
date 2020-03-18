@@ -1,0 +1,138 @@
+/* pages/profile/profile.wxss */
+page{
+  background-color: rgb(250, 250, 250);
+}
+.user-info{
+  width: 100%;
+  height: 160rpx;
+  padding: 30rpx 10rpx;
+  display: flex;
+}
+.user-image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 30rpx;
+}
+.user-image image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.user-name{
+  width: 40%;
+  height: 160rpx;
+  margin-left: 40rpx;
+}
+.name{
+  height: 60%;
+  font-size: 34rpx;
+  line-height: 96rpx;
+}
+.city{
+  height: 40%;
+  font-size: 26rpx;
+  color: gray;
+}
+.user-adress{
+  width: 20%;
+  margin-left: 20rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.order{
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20rpx;
+  height: 240rpx;
+  background-color: white;
+}
+.order-title{
+  width: 90%;
+  height: 80rpx;
+  display: flex;
+  line-height: 60rpx;
+  margin: 0 5%;
+  border-bottom: solid 2rpx gainsboro;
+}
+.title{
+  width:50% ;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+.allorder{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 24rpx;
+  color: rgb(204, 202, 202);
+}
+.allorder image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.order-nav{
+  width: 90%;
+  margin: 4% 5%;
+  height: 140rpx;
+  display: flex;
+}
+.order-type{
+  width: 25%;
+  height: 100%;
+}
+.order-type image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.order-type view{
+  font-size: 24rpx;
+  display:flex; 
+  justify-content: center;
+}
+.mypet{
+  width: 96%;
+  border-radius: 20rpx;
+  background-color: white;
+  margin: 10rpx 2%;
+}
+.mp-title{
+  line-height: 80rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #2c2c2c;
+  width: 90%;
+  height: 80rpx;
+  margin: 0 5%;
+}
+.mp-content{
+  width: 90%;
+  margin: 0 5%;
+}
+.mp-info {
+  display: flex;
+  height: 200rpx;
+  margin: 10rpx 0;
+}
+.info-image {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 10rpx;
+  border: solid 2rpx black;
+}
+.info-dtl {
+  flex: 1;
+  margin: 10rpx;
+}
+.info-dtl view {
+  line-height: 60rpx;
+}

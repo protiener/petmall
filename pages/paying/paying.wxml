@@ -1,0 +1,69 @@
+<!--pages/paying/paying.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+<!-- 选择地址 -->
+<view class="select-address" bindtap="chooseAddress">
+  <view class="icon-image">
+    <image src="/assets/order/address.png" mode="widthFix"/>
+  </view>
+  <view class="user-info">
+    <view class="info-item">
+      <text class="item-name">{{address.reservoir}}</text>
+      <text class="item-phone">{{address.phone}}</text>
+    </view>
+    <view class="info-item">
+      <text class="item-address">{{address.address}}</text> 
+    </view>
+  </view>
+  <view class="more-address">
+    <image src="/assets/profile/right.png" mode="widthFix"/>
+  </view>
+</view>
+<!-- 展示商品 -->
+<block wx:for="{{allAddress}}" wx:key="item" wx:if="{{isSelect}}" >
+  <view class="choose-address" bindtap="chooseAddress" data-index="{{index}}">
+    <view class="icon-image">
+      <image src="/assets/order/address.png" mode="widthFix"/>
+    </view>
+    <view class="user-info">
+      <view class="info-item">
+        <text class="item-name">{{item.reservoir}}</text>
+        <text class="item-phone">{{item.phone}}</text>
+      </view>
+      <view class="info-item">
+        <text class="item-address">{{item.address}}</text> 
+      </view>
+    </view>
+    <view class="more-address">
+      <image src="/assets/profile/right.png" mode="widthFix"/>
+    </view>
+  </view>
+</block>
+<view class="goods-table">
+  <view class="table-title">订单内容</view>
+  <view class="table-contene">
+    <block wx:for="{{waitPaying}}" wx:key="item">
+      <view class="goods-item">
+        <view class="goods-image">
+          <image src="{{item.image}}" mode="widthFix"/>
+        </view>
+        <view class="goods-info">
+          <view class="goods-title">{{item.name}}</view>
+        </view>
+        <view class="goods-count">×{{item.count}}</view>
+      </view>
+      <view class="goods-price">
+          小结:
+          <image src="/assets/goods/cartprice.png"/>
+          {{formatPrice.toFix(item.price * item.count)}}
+        </view>
+    </block>
+  </view>
+</view>
+<view class="paying-detail">
+  <view class="paying-info">
+    共{{totalCount}}件 合计: 
+    <image src="/assets/goods/cartprice.png" mode="widthFix"/>
+    {{formatPrice.toFix(totalPrice)}}
+  </view>
+  <view class="submit" bindtap="getPaying">提交订单</view>
+</view>

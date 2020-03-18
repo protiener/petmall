@@ -1,0 +1,30 @@
+<!--pages/order/order.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+<view class="order-nav">
+  <block wx:for="{{navName}}" wx:key="item">
+    <view class="{{navType[index]}}" bindtap="selectNav" data-index="{{index}}">{{item}}</view>
+  </block>
+</view>
+<block wx:for="{{selectOrder}}" wx:key="item">
+  <view class="goods-table" bindtap="turnTodetail" data-index="{{index}}">
+    <view class="table-title">订单内容</view>
+      <view class="table-contene">
+        <block wx:for="{{item.goods}}" wx:key="item">
+          <view class="goods-item">
+            <view class="goods-image">
+              <image src="{{item.image}}" />
+            </view>
+            <view class="goods-info">
+              <view class="goods-title">{{item.name}}</view>
+            </view>
+            <view class="goods-count">×{{item.count}}</view>
+          </view>
+        </block>
+        <view class="goods-price">
+          价格:
+          <image src="/assets/goods/cartprice.png"/>
+          {{formatPrice.toFix(item.price)}}
+        </view>
+      </view>
+    </view>
+</block>

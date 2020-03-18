@@ -1,0 +1,42 @@
+<!--pages/goods/goods.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+<!-- 类别商品标题 -->
+<view class="goods-title">
+  <view class="gtitle-image">
+    <image src="{{category.image}}" mode="widthFix"/>
+  </view>
+  <view class="gtitle-content">{{category.category_title}}</view>
+</view>
+<!-- 内容 -->
+<view class="goods-content">
+  <block wx:for="{{catedetail}}" wx:key="item" wx:if="{{category.category=='cat'||category.category=='dog'}}">
+    <view class="gct-item"
+          bindtap="skinTogooddet"
+          data-detcontent="{{item}}">
+      <image src="{{item.image}}" 
+              class="gct-image"/>
+      <view class="gct-detail">
+        <text class="dt-title">{{item.category_title}}</text>
+        <text class="dt-msg">年龄：{{item.age}}</text>
+      </view>
+      <view class="gct-price">
+        <image src="/assets/goods/price.svg.png" class="icon-image"/>
+      {{formatPrice.toFix(item.price)}}</view>
+    </view>
+  </block>
+  <block wx:for="{{catedetail}}" wx:key="item" wx:if="{{category.category=='tool'}}">
+    <view class="gct-item"
+          bindtap="skinTogooddet"
+          data-detcontent="{{item}}">
+      <image src="{{item.image}}" 
+              class="gct-image"/>
+      <view class="gct-detail">
+        <text class="dt-title">{{item.title}}</text>
+        <text class="dt-msg">销量：{{item.sale}}</text>
+      </view>
+      <view class="gct-price">
+        <image src="/assets/goods/price.svg.png" class="icon-image"/>
+      {{formatPrice.toFix(item.price)}}</view>
+    </view>
+  </block>
+</view>

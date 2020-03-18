@@ -1,0 +1,95 @@
+/* pages/home/home.wxss */
+/* 轮播图 */
+.swiper{
+  width: 100%;
+  height: 440rpx;
+}
+.swiper-item{
+  width: 100%;
+  height: 100%;
+}
+.swiper-image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 热门分类 */
+.hotcate{
+  border-bottom: solid 12rpx gainsboro;
+}
+.homehotcate{
+  display: flex;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.homehotcate-item{
+  flex: 1;
+  text-align: center;
+}
+.homehotcate-item image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.homehotcate-item view{
+  font-size: 24rpx; 
+}
+
+/* 用品推荐 */
+.hottooltitle{
+  height: 60rpx; 
+  background-color: #ff5557;
+  color: white;
+  font-weight: bold;
+  line-height: 60rpx;
+  text-align: center;
+}
+.hottool{
+  width: 100%;
+  height: 200rpx;
+}
+.hottool-item{
+  height: 160rpx;
+  float: left;
+  margin-top: 20rpx;
+  width: 100%;
+  border-bottom: solid 4rpx rgb(248, 248, 248);
+}
+.hottool-image{
+  width: 20%;
+  float: left;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.hottool-content{
+  display: inline-block;
+  width: 70%;
+  height: 160rpx;
+  margin-left: 20rpx;
+}
+.hottool-item text{
+  width: 540rpx;
+  font-size: 26rpx;
+  height: 80rpx;
+  display: inline-block;
+  margin-bottom: 20rpx;
+}
+.goods-iconbox{
+  height: 40rpx;
+  width: 240rpx;
+  display: inline-block;
+}
+.goods-iconbox image{
+  width: 40rpx;
+  float: left;
+  margin-right: 16rpx;
+  margin-left: 16rpx;
+}
+.goods-iconbox text{
+  width: 140rpx;
+  height: 40rpx;
+  display: inline-block;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}

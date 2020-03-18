@@ -1,0 +1,22 @@
+<!--pages/address/address.wxml-->
+<view class="input-address">
+  我的地址
+  <image src="/assets/commu/update.png" bindtap="addNewAddress"/>
+</view>
+<view class="address">
+  <block wx:for="{{address}}" wx:key="item" >
+    <view class="address-item" 
+          bindlongtap="deleteAddress"
+          data-index="{{index}}">
+      <view class="ad-info">
+        <text>{{item.reservoir}}</text>
+        <text>{{item.phone}}</text>
+        <text>{{item.address}}</text>
+      </view>
+      <view class="address-update" 
+            hover-class="update-hover" 
+            bindtap="updateAddress" 
+            data-index="{{index}}">编辑</view>
+    </view>
+  </block>
+</view>

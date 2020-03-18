@@ -1,0 +1,57 @@
+<!--pages/profile/profile.wxml-->
+<view class="user-info">
+  <view class="user-image">
+    <image src="{{userInfo.avatarUrl}}"/>
+  </view>
+  <view class="user-name">
+    <view class="name">{{userInfo.nickName}}</view>
+    <view class="city">{{userInfo.province}} {{userInfo.city}}</view>
+  </view>
+  <view class="user-adress" bindtap="updateAddress">地址管理</view>
+</view>
+<view class="order">
+  <view class="order-title">
+    <view class="title">我的订单</view>
+    <view class="allorder" bindtap="turnToOrder" data-state="{{0}}">查看所有订单
+      <image src="/assets/profile/right.png"/>
+    </view>
+  </view>
+  <view class="order-nav">
+    <view class="order-type" bindtap="turnToOrder" data-state="{{1}}">
+      <view><image src="/assets/profile/pay.png"/></view>
+      <view>待支付</view>
+    </view>
+    <view class="order-type" bindtap="turnToOrder" data-state="{{2}}">
+      <view><image src="/assets/profile/send.png"/></view>
+      <view>待发货</view>
+    </view>
+    <view class="order-type" bindtap="turnToOrder" data-state="{{3}}">
+      <view><image src="/assets/profile/take.png"/></view>
+      <view>待收货</view>
+    </view>
+    <view class="order-type" bindtap="turnToOrder" data-state="4">
+      <view><image src="/assets/profile/drawback.png"/></view>
+      <view>退款/售后</view>
+    </view>
+  </view>
+</view>
+<!-- <view class="mypet">
+  <view class="mp-title">
+    我的宠物档案
+  </view>
+  <view class="mp-content">
+    <view class="mp-info">
+      <view class="info-image">image</view>
+      <view class="info-dtl">
+        <view>姓名：</view>
+        <view>品种：</view>
+        <view>年龄：</view>
+      </view>
+    </view>
+    <view class="mp-log">
+      <view>疫苗接种</view>
+      <view>健康情况</view>
+      <view>注意事项</view>
+    </view>
+  </view>
+</view> -->

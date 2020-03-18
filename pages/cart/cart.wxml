@@ -1,0 +1,74 @@
+<!--pages/cart/cart.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+<!-- 购物车 -->
+<view class="cart-title">
+  购物车({{cartInfo.length}})
+  <button size="mini" bindtap="turnToDelete">管理</button>
+</view>
+<view class="cart">
+  <!-- 如果购物车为空 -->
+  <view class="pet-cart">
+    <block wx:if="{{cartInfo.length == 0}}">
+      <view class="empty-cart">你的购物车空空如也！</view>
+    </block>
+    <block wx:for="{{cartInfo}}" wx:key="item">
+      <view class="pet-item">
+        <view class="item-check">
+          <checkbox-group bindchange="singleSelected" data-index="{{index}}">
+            <checkbox checked="{{item.selected}}"/>
+          </checkbox-group>
+        </view>
+        <view class="item-image">
+          <image src="{{item.image}}"/>
+        </view>
+        <view class="item-content">
+          <view class="ct-title">
+            {{item.name}}
+          </view>
+          <view class="ct-detail">
+            <view class="ct-price">
+            <image src="/assets/goods/cartprice.png"/>
+            <text>{{formatPrice.toFix(item.price)}}</text>
+          </view>
+          <view class="ct-count">
+            <image src="/assets/goods/plus.png" bindtap="numPlus" data-index="{{index}}"/>
+            <input type="number" value="{{item.count}}"/>
+            <image src="/assets/goods/sub.png" bindtap="numSub" data-index="{{index}}"/>
+          </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 全选，结算 -->
+<block wx:if="{{isDelete == false}}">
+  <view class="cart-total">
+    <view class="allcheckd">
+      <checkbox-group bindchange="allSelected" class="checkgbox">
+        <checkbox checked="{{checkedAll}}"/>
+      </checkbox-group>
+      <text>全选</text>
+    </view>
+    <view class="totalprice">
+      合计：
+      <image src="/assets/goods/cartprice.png"/>
+      {{formatPrice.toFix(totalPrice)}}
+    </view>
+    <view class="cart-pay" bindtap="turnToPaying">结算({{cartNum}})</view>
+  </view>
+</block>
+<!-- 删除 -->
+<block wx:if="{{isDelete == true}}">
+  <view class="cart-total">
+    <view class="allcheckd">
+      <checkbox-group bindchange="allSelected" class="checkgbox">
+        <checkbox checked="{{checkedAll}}"/>
+      </checkbox-group>
+      <text>全选</text>
+    </view>
+    <view class="cart-delete" bindtap="cartDelete">删除</view>
+    <view class="cart-delete" bindtap="turnToMain">完成</view>
+  </view>
+</block>

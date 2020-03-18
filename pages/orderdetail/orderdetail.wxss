@@ -1,0 +1,155 @@
+/* pages/orderdetail/orderdetail.wxss */
+/* pages/paying/paying.wxss */
+page{
+  background-color: rgb(250, 250, 250)
+}
+.select-address{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20rpx;
+  height: 140rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+}
+.choose-address{
+  width: 90%;
+  margin: 0 5%;
+  height: 140rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+}
+.icon-image{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-image image{
+  width: 50%;
+}
+.user-info{
+  width: 70%;
+  margin: 10rpx 0;
+}
+.item-name{
+  font-size: 30rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.item-phone{
+  font-size: 28rpx;
+  color: gray;
+}
+.item-address{
+  height: 100rpx;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.more-address{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-address image{
+  width: 50%;
+}
+.goods-table{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.table-title{
+  width: 96%;
+  height: 60rpx;
+  padding: 10rpx 2%;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom: solid 4rpx rgb(248, 248, 248)
+}
+.table-contene{
+  margin: 10rpx;
+  width: 100%;
+}
+.goods-item{
+  display: flex;
+  height: 160rpx;
+}
+.goods-image{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.goods-image image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.goods-info{
+  width: 60%;
+  height: 120rpx;
+  margin: 10rpx;
+}
+.goods-title{
+  height: 120rpx;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: 10rpx;
+}
+.goods-count{
+  width: 20%;
+  line-height: 120rpx;
+  height: 120rpx;
+  font-size: 28rpx;
+  color: gainsboro;
+  margin: 20rpx 0;
+  text-align: center;
+}
+.goods-price{
+  width: 90%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 28rpx;
+}
+.goods-price image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.order-state {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.order-info {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: gray;
+  margin: 0 20rpx;
+}
+.order-info view{
+  float: right;
+}

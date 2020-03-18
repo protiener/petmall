@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<block>
+  <image class="bgimage" 
+         src="cloud://petmall-g5tlq.7065-petmall-g5tlq-1301358615/interface/logo1.JPG"
+         mode="aspectFit"/>
+</block>
+<view class="container">
+
+  <view class="userinfo">
+    <!-- 用户登录 -->
+    <button wx:if="{{!userInfo.openid}}" 
+            open-type="getUserInfo" 
+            lang="zh_CN"
+            bindgetuserinfo="getUserInfo"
+            class="login-button"
+            type="primary">
+            授权登录
+    </button>
+    <!-- 登陆后显示用户的信息 -->
+    <block>
+      <image class="userinfo-avatar" 
+             src="{{userInfo.avatarUrl}}"/>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>

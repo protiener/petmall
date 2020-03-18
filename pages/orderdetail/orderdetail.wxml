@@ -1,0 +1,51 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+<!-- 选择地址 -->
+<view class="select-address">
+  <view class="icon-image">
+    <image src="/assets/order/address.png" mode="widthFix"/>
+  </view>
+  <view class="user-info">
+    <view class="info-item">
+      <text class="item-name">{{thisorder.address.reservoir}}</text>
+      <text class="item-phone">{{thisorder.address.phone}}</text>
+    </view>
+    <view class="info-item">
+      <text class="item-address">{{thisorder.address.address}}</text> 
+    </view>
+  </view>
+</view>
+<!-- 展示商品 -->
+<view class="goods-table">
+  <view class="table-title">订单内容</view>
+  <view class="table-contene">
+    <block wx:for="{{thisorder.goods}}" wx:key="item">
+      <view class="goods-item">
+        <view class="goods-image">
+          <image src="{{item.image}}" mode="widthFix"/>
+        </view>
+        <view class="goods-info">
+          <view class="goods-title">{{item.name}}</view>
+        </view>
+        <view class="goods-count">×{{item.count}}</view>
+      </view>
+      <view class="goods-price">
+          小结:
+          <image src="/assets/goods/cartprice.png"/>
+          {{formatPrice.toFix(item.price * item.count)}}
+        </view>
+    </block>
+  </view>
+</view>
+<!-- 订单状态 -->
+<view class="order-state">
+  <view class="order-info">总价
+    <view>￥{{formatPrice.toFix(thisorder.price)}}</view>
+  </view>
+  <view class="order-info">下单时间
+    <view>{{thisorder.date}}</view>
+  </view>
+  <view class="order-info">订单状态
+    <view>{{state[thisorder.station]}}</view>
+  </view>
+</view>

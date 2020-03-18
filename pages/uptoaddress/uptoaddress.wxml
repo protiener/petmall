@@ -1,0 +1,28 @@
+<!--pages/uptoaddress/uptoaddress.wxml-->
+<view class="adderss">
+  <view class="ad-msg">
+    <text>收件人</text>
+    <input class="ad-input" 
+            bindinput="getReservoir" 
+            placeholder="请输入收件人姓名" 
+            value="{{reservoir}}"/>
+  </view>
+  <view class="ad-msg">
+    <text>联系方式</text>
+    <input class="ad-input" 
+            bindinput="getPhone" 
+            placeholder="请输入联系方式" 
+            maxlength="11" 
+            value="{{phone}}"/>
+  </view>
+  <view class="ad-adderss">
+    <text>地址</text>
+    <textarea class="ad-textarea" 
+              bindinput="getAddress" 
+              placeholder="请输入详细地址" 
+              maxlength="50" 
+              value="{{address}}"/>
+  </view>
+  <view class="ad-botton" bindtap="addNewAddress" wx:if="{{addressInfo.length == 0 ? true : false}}">新增地址</view>
+  <view class="ad-botton" bindtap="updateAddress" wx:if="{{addressInfo.length == 0 ? flse : true}}">修改地址</view>
+</view>

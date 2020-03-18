@@ -1,0 +1,64 @@
+/* pages/uptoaddress/uptoaddress.wxss */
+page{
+  background-color: rgb(250, 250, 250);
+}
+.adderss{
+  width: 90%;
+  margin: 2% 5%;
+}
+.ad-msg{
+  height: 150rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  margin: 20rpx 0;
+}
+.ad-msg text{
+  display: block;
+  height: 60rpx;
+  font-size: 30rpx;
+  margin: 10rpx 20rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+}
+
+.ad-input{
+  border: solid 2rpx  rgb(250, 250, 250);
+  height: 50rpx;
+  font-size: 30rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 20rpx;
+}
+.ad-adderss{
+  height: 180rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  margin: 20rpx 0;
+}
+.ad-adderss text{
+  display: block;
+  height: 60rpx;
+  font-size: 30rpx;
+  margin: 10rpx 20rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+}
+.ad-textarea{
+  border: solid 2rpx  rgb(250, 250, 250);
+  height: 80rpx;
+  font-size: 30rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 20rpx;
+}
+.ad-botton{
+  border-radius: 20rpx;
+  background-color: #ff5557;
+  height: 60rpx;
+  font-size: 30rpx;
+  color: white;
+  line-height: 60rpx;
+  text-align: center;
+  font-weight: bold;
+}
+

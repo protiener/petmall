@@ -1,0 +1,126 @@
+/* pages/gooddetail/gooddetail.wxss */
+.det-image{
+  width: 100%;
+  height: 500rpx;
+  overflow: hidden;
+}
+.det-image image{
+  width: 100%;
+}
+.det_contene{
+  margin: 20rpx;
+}
+.det-title{
+  font-size: 30rpx;
+  color: #2c2c2c;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+  border-bottom: solid 4rpx rgb(248, 248, 248);
+}
+.det-indet{
+  display: flex;
+  height: 100rpx;
+}
+.det-detail{
+  height: 100%;
+  width: 50%;
+  display: inline-block
+}
+.det-detail text{
+  display: block;
+  margin: 10rpx;
+  color: rgb(172, 172, 172);
+  font-size: 24rpx;
+}
+.det-price{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+.icon-image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.det-cart{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 0;
+  border-left: solid 4rpx rgb(248, 248, 248);
+}
+
+.image-detail{
+  width: 100%;
+}
+.ide-title{
+  color: white;
+  background-color: #ff5557;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.intro-image{
+  width: 100%;
+}
+
+.intro-image image{
+  width: 100%;
+}
+.pet-detail{
+  border-bottom: solid 4rpx rgb(248, 248, 248);
+}
+.pet-image{
+  width: 100%;
+}
+.pet-image image{
+  width: 100%;
+  vertical-align: bottom;
+}
+.pde-box{
+  display: flex;
+}
+
+.pde-content{
+  padding: 20rpx;
+  width: 45%;
+}
+.pde-content text{
+  display: block;
+  margin: 10rpx;
+  font-size: 26rpx;
+}
+.pde-price{
+  width: 35%;
+  margin: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+.pde-price image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+}
+
+.pde-cart{
+  width: 20%;
+  margin: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: solid 4rpx gainsboro;
+  padding-left: 10rpx;
+}
+.pde-cart image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+}

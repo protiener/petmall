@@ -1,0 +1,29 @@
+<!--pages/category/category.wxml-->
+<!-- 分类界面 -->
+<view class="category">
+<!-- 左边分类栏 -->
+  <view class="left-cate">
+    <!-- <view class="left-item">狗狗分类</view> -->
+    <block wx:for="{{category}}" wx:key="item">
+      <view class="left-item"
+            bindtap="changeDetail"
+            data-cateitem="{{item.category}}">
+          {{item.name}}
+      </view>
+    </block>
+  </view>
+  <!-- 右边分类栏 -->
+  <scroll-view class="right-cate" 
+              scroll-y
+              style="height:{{scroll_height*2-40}}rpx">
+    <block wx:for="{{catedetail}}" wx:key="item">
+      <view class="right-item"
+            bindtap="skinTogoods"
+            data-catename="{{item}}">
+        <image src="{{item.image}}"/>
+        <view>{{item.category_title}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+

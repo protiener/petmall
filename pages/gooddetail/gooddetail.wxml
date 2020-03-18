@@ -1,0 +1,62 @@
+<!--pages/gooddetail/gooddetail.wxml-->
+<wxs module="formatPrice" src="../../wxs/format.wxs" />
+
+<!-- 顶部大图 -->
+<!-- 日用品展示 -->
+<block wx:if="{{goodsdetail.articles_type=='tool'}}">
+  <view class="det-image">
+    <image src="{{goodsdetail.image}}" mode="widthFix"/>
+  </view>
+  <!-- 商品内容 -->
+  <view class="det_contene" >
+    <view class="det-title">{{goodsdetail.title}}</view>
+    <view class="det-indet">
+      <view class="det-detail">
+        <text>销量：{{goodsdetail.sale}}</text>
+        <text>库存：{{goodsdetail.stock}}</text>
+      </view>
+      <view class="det-price">
+        <image src="/assets/goods/price.svg.png" class="icon-image"/>
+        {{formatPrice.toFix(goodsdetail.price)}}
+      </view>
+      <view class="det-cart" catchtap="addTocart">
+        <image src="/assets/goods/addcar.png" class="icon-image"/>
+      </view>
+    </view>
+  </view>
+  <!-- 商品详情 -->
+  <view class="image-detail">
+    <view class="ide-title">商品详情</view>
+    <view class="intro-image">
+      <block wx:for="{{goodsdetail.image_intro}}" wx:key="item"> 
+        <image src="{{item}}" mode="widthFix"/>
+      </block>
+    </view>
+  </view>
+</block>
+
+<!-- 宠物展示 -->
+<block wx:if="{{goodsdetail.articles_type=='cat'||goodsdetail.articles_type=='dog'}}">
+  <view class="pet-image">
+    <image src="{{goodsdetail.image}}" mode="widthFix"/>
+  </view>
+  <!-- 宠物信息 -->
+  <view class="pet-detail">
+    <view class="ide-title">宠物详情</view>
+    <view class="pde-box">
+      <view class="pde-content">
+          <text>品种：{{goodsdetail.category_title}}</text>
+          <text>年龄：{{goodsdetail.age}}</text>
+          <text>性别：{{goodsdetail.sex==1? "公":"母"}}</text>
+          <text>健康情况：{{goodsdetail.vaccine}}</text>
+      </view>
+      <view class="pde-price">
+      <image src="/assets/goods/price.svg.png"/>
+        {{formatPrice.toFix(goodsdetail.price)}}
+      </view>
+      <view class="pde-cart" catchtap="addTocart">
+        <image src="/assets/goods/addcar.png"/>
+      </view>
+    </view>
+  </view>
+</block>

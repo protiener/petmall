@@ -1,0 +1,75 @@
+/* pages/goods/goods.wxss */
+.goods-title{
+  width: 100%;
+}
+.gtitle-image{
+  width: 100%;
+
+}
+.gtitle-image image{
+  width: 100%;
+  vertical-align: bottom;
+}
+.gtitle-content{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 40rpx;
+  background-color: #ff5557;
+  color: white;
+}
+
+/* 内容 */
+.goods-content{
+  height: 200rpx;
+  width: 100%;
+}
+.gct-item{
+  height: 160rpx;
+  display: flex;
+  margin-top: 20rpx;
+  width: 100%;
+  border-bottom: solid 4rpx rgb(248, 248, 248);
+}
+.gct-image{
+  width: 20%;
+  height: 140rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: solid 4rpx rgb(248, 248, 248);
+  border-radius: 10%;
+}
+.gct-detail{
+  display: inline-block;
+  width: 45%;
+  height: 160rpx;
+  margin-left: 20rpx;
+}
+.dt-title{
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 26rpx;
+}
+.dt-msg{
+  font-size: 26rpx;
+  color: rgb(197, 197, 197);
+}
+.icon-image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.gct-price{
+  display: inline-block;
+  width: 35%;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  font-size: 40rpx;
+}

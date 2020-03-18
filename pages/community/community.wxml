@@ -1,0 +1,58 @@
+<!-- pages/community/community.wxml -->
+<!-- 发帖子 -->
+<view class="input-essay">
+  宠物社区
+  <image src="/assets/commu/update.png" bindtap="turnToUp"/>
+</view>
+
+<!-- 帖子 -->
+<view class="community">
+  <block wx:for="{{essay}}" wx:key="item" wx:for-index = "lindex">
+    <view class="community-box">
+      <view class="user-info">
+        <image src="{{item.userinfo.avatarUrl}}"/>
+        <view class="info-name">
+          <text class="info-nickname">{{item.userinfo.nickName}}</text>
+          <text class="info-date">{{item.date}}</text>
+        </view>
+      </view>
+      <view class="essay-content">
+        <swiper class="swiper" 
+          indicator-dots="{{item.image.length > 1 ? true : false}}"
+          circular
+          indicator-active-color="white"> 
+          <block wx:for="{{item.image}}" wx:key="item">
+            <swiper-item class="swiper-item" >
+              <image src="{{item}}" 
+                      class="swiper-image" 
+                      bindtap="previewImage" 
+                      id="{{item}}" 
+                      data-index = "{{lindex}}"
+                      mode="aspectFill"/>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="content-text">
+          <view class="text-title">{{item.title}}</view>
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="comment">
+        <view class="comment-ct">
+          <view class="comment-count">共{{item.comment.length}}条评论</view>
+          <block wx:for="{{item.comment}}" wx:key="item" wx:if="{{item.comment.length == 0? false : true}}">
+            <view class="comment-item">{{item.user.nickName}}: {{item.content}}</view>
+          </block>
+          <block wx:if="{{item.comment.length == 0? true : false}}">
+            <view class="comment-item">暂无评论</view>
+          </block>
+        </view>
+        <view class="comment-discuss">
+          <image src="/assets/commu/comment.png" mode="widthFix"/>
+          <input placeholder="分享你的评论" bindinput="getComment" value="{{commentCt}}"/>
+          <button bindtap="addComment" data-index="{{lindex}}"><text>发送</text></button>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

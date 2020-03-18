@@ -1,0 +1,20 @@
+<!--pages/uptocommunity/uptocommunity.wxml-->
+<view class="up-nav">
+  分享宠物点滴
+</view>
+<view class="up-content">
+  <input placeholder="写下你的标题" class="content-title" bindinput="getContentTitle"/>
+  <textarea placeholder="写下你的分享,不超过140个字" class="content-text" bindinput="getContentText" maxlength="140"/>
+</view>
+<view class="up-image">
+  <block wx:for="{{newImage}}" wx:key="item" wx:if="{{image.length != 0}}">
+    <image src="{{item}}" 
+            bindtap="previewImage" 
+            bindlongpress="deleteImage" 
+            mode="aspectFill"
+            id="{{item}}"
+            data-index="{{index}}"/>
+  </block>
+  <view class="upbotton" bindtap="chooseImage">+</view>
+</view>
+<view class="inputbotton" bindtap="inputEssay">发布</view>
